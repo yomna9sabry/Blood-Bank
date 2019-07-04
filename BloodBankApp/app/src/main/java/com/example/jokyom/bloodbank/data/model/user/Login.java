@@ -1,11 +1,10 @@
 
-package com.example.jokyom.bloodbank.data.model.governments;
+package com.example.jokyom.bloodbank.data.model.user;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Governments {
+public class Login {
 
     @SerializedName("status")
     @Expose
@@ -15,7 +14,7 @@ public class Governments {
     private String msg;
     @SerializedName("data")
     @Expose
-    private List<GovernmentsData> data = null;
+    private Data data;
 
     public Integer getStatus() {
         return status;
@@ -33,11 +32,11 @@ public class Governments {
         this.msg = msg;
     }
 
-    public List<GovernmentsData> getData() {
+    public Data getData() {
         return data;
     }
 
-    public void setData(List<GovernmentsData> data) {
+    public void setData(Data data) {
         this.data = data;
     }
 
