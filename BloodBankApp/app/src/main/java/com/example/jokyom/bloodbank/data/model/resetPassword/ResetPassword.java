@@ -1,10 +1,10 @@
 
-package com.example.jokyom.bloodbank.data.model.user;
+package com.example.jokyom.bloodbank.data.model.resetPassword;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Login {
+public class ResetPassword {
 
     @SerializedName("status")
     @Expose
@@ -14,7 +14,7 @@ public class Login {
     private String msg;
     @SerializedName("data")
     @Expose
-    private Data data;
+    private ResetPassData data;
 
     public Integer getStatus() {
         return status;
@@ -32,11 +32,11 @@ public class Login {
         this.msg = msg;
     }
 
-    public Data getData() {
+    public ResetPassData getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    public void setData(ResetPassData data) {
         this.data = data;
     }
 

@@ -3,13 +3,14 @@ package com.example.jokyom.bloodbank.ui.fragment.userCycle;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.jokyom.bloodbank.R;
-import com.example.jokyom.bloodbank.data.model.governments.Governments;
-import com.example.jokyom.bloodbank.data.model.user.Login;
+import com.example.jokyom.bloodbank.data.model.login.Login;
 import com.example.jokyom.bloodbank.data.rest.ApiServices;
 import com.example.jokyom.bloodbank.helper.HelperMethod;
 
@@ -25,6 +26,12 @@ import static com.example.jokyom.bloodbank.data.rest.RetrofitClient.getClient;
 
 
 public class LogInFragment extends Fragment {
+    public  void forgetPassword()
+    {
+        ForgetPasswordStep1Fragment forgetPasswordStep1Fragment=new ForgetPasswordStep1Fragment();
+        HelperMethod.replace(forgetPasswordStep1Fragment,getActivity().getSupportFragmentManager(),R.id.userCycleFragmentContainer,null,null);
+
+    }
 
     Unbinder unbinder;
 
@@ -53,14 +60,16 @@ public class LogInFragment extends Fragment {
         unbinder = ButterKnife.bind(this, view);
 
         apiServices = getClient().create(ApiServices.class);
-        apiServices.login().enqueue(new Callback<Login>() {
+        apiServices.UserLogin(loginFragmentTextInputPhone.toString(),loginFragmentTextInputPassword.toString()).enqueue(new Callback<Login>() {
             @Override
             public void onResponse(Call<Login> call, Response<Login> response) {
-
+                //accepted user
+                //open profile
             }
 
             @Override
             public void onFailure(Call<Login> call, Throwable t) {
+                Toast.makeText(getActivity(), "Something get wrong", Toast.LENGTH_LONG).show();
 
             }
         });

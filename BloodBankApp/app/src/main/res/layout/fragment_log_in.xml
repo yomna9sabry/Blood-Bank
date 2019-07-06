@@ -65,17 +65,18 @@
 
 
         />
+
     <TextView
-        android:height="25dp"
-        android:layout_below="@id/loginFragmentTextInputPassword"
-        android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forget password"
+        android:layout_below="@id/loginFragmentTextInputPassword"
+        android:layout_alignParentEnd="true"
+        android:height="25dp"
         android:drawableStart="@drawable/ic_warning"
         android:drawablePadding="8dp"
         android:gravity="center"
-        />
+        android:onClick="forgetPassword"
+        android:text="Forget password" />
     <Button
         android:id="@+id/loginFragmentLoginBtn"
         android:layout_width="match_parent"

@@ -1,10 +1,10 @@
 
-package com.example.jokyom.bloodbank.data.model.user;
+package com.example.jokyom.bloodbank.data.model.login;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Governorate {
+public class BloodType {
 
     @SerializedName("id")
     @Expose
