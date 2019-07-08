@@ -60,7 +60,7 @@ public class LogInFragment extends Fragment {
         unbinder = ButterKnife.bind(this, view);
 
         apiServices = getClient().create(ApiServices.class);
-        apiServices.UserLogin(loginFragmentTextInputPhone.toString(),loginFragmentTextInputPassword.toString()).enqueue(new Callback<Login>() {
+        apiServices.UserLogin(loginFragmentTextInputPhone.getEditText().toString(),loginFragmentTextInputPassword.toString()).enqueue(new Callback<Login>() {
             @Override
             public void onResponse(Call<Login> call, Response<Login> response) {
                 //accepted user

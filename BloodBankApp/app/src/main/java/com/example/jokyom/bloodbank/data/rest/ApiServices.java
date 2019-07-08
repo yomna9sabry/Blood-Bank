@@ -36,12 +36,12 @@ public interface ApiServices {
     Call<Register>register(@Field("name") String name,
                            @Field("email") String email,
                            @Field("birth_date") String birth_date,
-                           @Field("city_id") String city_id,
+                           @Field("city_id") int city_id,
                            @Field("phone") String phone,
                            @Field("donation_last_date") String  donation_last_date,
                            @Field("password") String password,
                            @Field("password_confirmation") String password_confirmation,
-                           @Field("blood_type_id") String blood_type_id);
+                           @Field("blood_type_id") int blood_type_id);
 
     @POST("reset-password")
     @FormUrlEncoded

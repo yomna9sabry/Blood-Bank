@@ -7,14 +7,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.jokyom.bloodbank.R;
+import com.example.jokyom.bloodbank.data.model.register.Register;
 import com.example.jokyom.bloodbank.data.rest.ApiServices;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static com.example.jokyom.bloodbank.data.rest.RetrofitClient.getClient;
 
@@ -64,10 +69,28 @@ public class RegisterFragment extends Fragment {
 
         userRegister();
         ApiServices apiServices = getClient().create(ApiServices.class);
-        apiServices.register(RegisterFragmentTextInputName.toString(),RegisterFragmentTextInputEmail.toString(),RegisterFragmentTextInputBirth.toString()
-                ,RegisterFragmentTextInputBlood.toString(),RegisterFragmentTextInputLastDonation.toString()
-                ,RegisterFragmentTextInputTerritory.toString(),RegisterFragmentTextInputCity.toString(),RegisterFragmentTextInputPhone.toString()
-        ,RegisterFragmentTextInputPassword.toString());
+        apiServices.register(
+                RegisterFragmentTextInputName.getEditText().toString()
+                ,RegisterFragmentTextInputEmail.getEditText().toString()
+                ,RegisterFragmentTextInputBirth.getEditText().toString()
+                ,Integer.parseInt(RegisterFragmentTextInputCity.getEditText().toString())
+                ,RegisterFragmentTextInputLastDonation.getEditText().toString()
+                ,RegisterFragmentTextInputTerritory.getEditText().toString()
+                ,RegisterFragmentTextInputPhone.getEditText().toString()
+                ,RegisterFragmentTextInputPassword.getEditText().toString()
+                ,Integer.parseInt(RegisterFragmentTextInputBlood.getEditText().toString())).enqueue(new Callback<Register>() {
+            @Override
+            public void onResponse(Call<Register> call, Response<Register> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Register> call, Throwable t) {
+                Toast.makeText(getContext(), "something went wrong", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_register, container, false);
         unbinder = ButterKnife.bind(this, view);

@@ -83,6 +83,7 @@
             android:padding="@dimen/dim8"
             />
     </android.support.design.widget.TextInputLayout>
+
     <Button
 
         android:id="@id/ForgetFragmentStep2TextInputPasswordFragmentChangPassBtn"

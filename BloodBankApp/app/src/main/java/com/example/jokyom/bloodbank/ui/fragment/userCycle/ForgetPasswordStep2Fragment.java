@@ -62,7 +62,8 @@ public class ForgetPasswordStep2Fragment extends Fragment {
     @OnClick(R.id.ForgetFragmentStep2TextInputPasswordFragmentChangPassBtn)
     public void onViewClicked() {
         ApiServices apiServices = getClient().create(ApiServices.class);
-        apiServices.newPassword(ForgetFragmentStep2TextView.toString(),ForgetFragmentStep2TextInputPasswordFragmentCodeVerification.toString()
-        ,ForgetFragmentStep2TextInputPasswordFragmentNewPassword.toString(),ForgetFragmentStep2TextInputPasswordFragmentNewPasswordConfirm.toString());
+        apiServices.newPassword(ForgetFragmentStep2TextView.getText().toString()
+                ,ForgetFragmentStep2TextInputPasswordFragmentCodeVerification.getEditText().toString()
+        ,ForgetFragmentStep2TextInputPasswordFragmentNewPassword.getEditText().toString(),null);
     }
 }
