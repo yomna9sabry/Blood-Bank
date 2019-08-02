@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.LoginFragment"
+    android:background="@drawable/splash"
+    android:padding="@dimen/txt_size_32"
+    >
+
+
+    <ImageView
+        android:id="@+id/loginFragmentImgIcon"
+        android:layout_width="@dimen/dim_120"
+        android:layout_height="@dimen/dim_120"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/loginFragmentEditUserPhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/txt_size_44"
+        android:layout_marginTop="@dimen/txt_size_32"
+        android:background="@drawable/shape_edit"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        android:paddingStart="@dimen/dim_8"
+        android:textColorHint="@color/dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginFragmentImgIcon" />
+
+    <EditText
+        android:id="@+id/loginFragmentEditUserPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/txt_size_44"
+        android:layout_marginTop="@dimen/dim_l6"
+        android:background="@drawable/shape_edit"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/dark"
+        android:paddingStart="@dimen/dim_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginFragmentEditUserPhone" />
+
+    <Button
+        android:id="@+id/loginFragmentBtnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_28"
+        android:background="@drawable/shape_btn_login"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginFragmentChkBox" />
+
+    <Button
+        android:id="@+id/loginFragmentBtnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_btn_register"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginFragmentBtnLogin"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/loginFragmentTxtForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txt_size_12"
+        android:text="@string/forget_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginFragmentEditUserPassword"
+        android:textSize="@dimen/txt_size_10"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/dim_32"
+        android:layout_height="@dimen/dim_l6"
+        android:layout_marginStart="@dimen/dim_8"
+        android:layout_marginTop="@dimen/dim_8"
+        android:src="@drawable/icon_foget_password"
+        app:layout_constraintBottom_toBottomOf="@+id/loginFragmentTxtForgetPassword"
+        app:layout_constraintStart_toEndOf="@+id/loginFragmentTxtForgetPassword"
+        app:layout_constraintTop_toTopOf="@+id/loginFragmentTxtForgetPassword"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <CheckBox
+        android:id="@+id/loginFragmentChkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8"
+        android:text="@string/remember_me"
+        android:textSize="@dimen/txt_size_8"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/loginFragmentEditUserPassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/loginFragmentEditUserPassword" />
+
+    <ProgressBar
+        android:id="@+id/loginFragmentProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

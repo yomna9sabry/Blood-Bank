@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray77">
+
+    <include
+        android:id="@+id/fragmentAboutTool"
+        layout="@layout/tool_bar" />
+
+    <TextView
+        android:id="@+id/fragmentAboutText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragmentAboutTool"
+        android:layout_margin="@dimen/dim_l2"
+        android:text="@string/details_about"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/fragmentAboutText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragmentAboutText"
+         android:layout_margin="@dimen/dim_l2"
+
+        android:text="@string/details_about"
+        android:background="@color/white"/>
+
+
+    <TextView
+        android:id="@+id/fragmentAboutText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragmentAboutText2"
+        android:layout_margin="@dimen/dim_l2"
+        android:text="@string/details_about"
+        android:background="@color/white"/>
+</RelativeLayout>

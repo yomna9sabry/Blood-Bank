@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray77"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.RegisterFragment"
+
+    >
+
+    <include
+        android:id="@+id/updateDataUserFragmentTolBr"
+        layout="@layout/tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentTolBr">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dim_24"
+                android:paddingStart="@dimen/txt_size_32"
+                android:paddingEnd="@dimen/txt_size_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentTolBr">
+
+                <EditText
+                    android:id="@+id/updateDataUserFragmentEditUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/updateDataUserFragmentEditEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentEditUserName" />
+
+                <EditText
+                    android:id="@+id/updateDataUserFragmentEditDataOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/date_of_bearth"
+                    android:inputType="date"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentEditEmail"
+
+                    tools:layout_editor_absoluteY="212dp" />
+
+
+                <Spinner
+                    android:id="@+id/updateDataUserFragmentBloodTypesSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_spinner"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentEditDataOfBirth" />
+
+                <EditText
+                    android:id="@+id/updateDataUserFragmentDataLastDonation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/last_donation"
+                    android:inputType="datetime"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentBloodTypesSpinner" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dim_8"
+                    android:src="@drawable/icon_calendar"
+                    app:layout_constraintBottom_toBottomOf="@+id/updateDataUserFragmentEditDataOfBirth"
+                    app:layout_constraintEnd_toEndOf="@+id/updateDataUserFragmentEditDataOfBirth"
+                    app:layout_constraintTop_toTopOf="@+id/updateDataUserFragmentEditDataOfBirth" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dim_8"
+                    android:src="@drawable/icon_calendar"
+                    app:layout_constraintBottom_toBottomOf="@+id/updateDataUserFragmentDataLastDonation"
+                    app:layout_constraintEnd_toEndOf="@+id/updateDataUserFragmentDataLastDonation"
+                    app:layout_constraintTop_toTopOf="@+id/updateDataUserFragmentDataLastDonation" />
+
+                <Spinner
+                    android:id="@+id/updateDataUserFragmentGovernoratesSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_spinner"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentDataLastDonation" />
+
+                <Spinner
+                    android:id="@+id/updateDataUserFragmentCiteSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_spinner"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentGovernoratesSpinner" />
+
+                <EditText
+                    android:id="@+id/updateDataUserFragmentPhoneEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentCiteSpinner" />
+
+                <EditText
+                    android:id="@+id/updateDataUserFragmentPasswordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentPhoneEdit" />
+
+                <EditText
+                    android:id="@+id/updateDataUserFragmentEmphasisPasswordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentPasswordEdit" />
+
+                <Button
+                    android:id="@+id/updateDataUserFragmentUpdateDataUserBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_btn_new_register"
+                    android:text="@string/add"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/updateDataUserFragmentEmphasisPasswordEdit" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/updateDataUserFragmentUpdateDataUserBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/updateDataUserFragmentEditUserName" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.RegisterFragment"
+    tools:ignore="RtlSymmetry,Autofill,ContentDescription">
+
+    <include layout="@layout/tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redisterFragmentTolBr">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dim_24"
+                android:paddingStart="@dimen/txt_size_32"
+                android:paddingEnd="@dimen/txt_size_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/redisterFragmentTolBr">
+
+                <EditText
+                    android:id="@+id/addDonationRequestFragmentEditUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/addDonationRequestFragmentEditAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/age"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentEditUserName" />
+
+                <Spinner
+                    android:id="@+id/addDonationRequestFragmentBloodTypesSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_spinner"
+                    android:hint="@string/date_of_bearth"
+                    android:inputType="date"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentEditAge"
+                    tools:layout_editor_absoluteY="212dp"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/addDonationRequestFragmentEditNumberBag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_spinner"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentBloodTypesSpinner" />
+
+
+                <EditText
+                    android:id="@+id/addDonationRequestFragmentNameHospitalEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/name_hospital"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toStartOf="@+id/addDonationRequestLocationMapImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentEditNumberBag" />
+
+
+                <EditText
+                    android:id="@+id/addDonationRequestFragmentAddressHospitalEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/hospital_address"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentNameHospitalEdit" />
+
+
+                <Spinner
+                    android:id="@+id/addDonationRequestFragmentGovernoratesSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_spinner"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentAddressHospitalEdit" />
+
+                <Spinner
+                    android:id="@+id/addDonationRequestFragmentCiteSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_spinner"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentGovernoratesSpinner" />
+
+                <EditText
+                    android:id="@+id/addDonationRequestFragmentPhoneEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_40"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentCiteSpinner" />
+
+                <EditText
+                    android:id="@+id/addDonationRequestFragmentNoteEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_96"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_edit"
+                    android:hint="@string/note"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/dim_8"
+                    android:textColorHint="@color/dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentPhoneEdit" />
+
+
+                <Button
+                    android:id="@+id/addDonationFragmentSendBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:background="@drawable/shape_btn_new_register"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentNoteEdit" />
+
+                <ProgressBar
+                    android:id="@+id/addDonationRequestprogressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/addDonationFragmentSendBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addDonationRequestFragmentEditUserName" />
+
+                <ImageView
+                    android:id="@+id/addDonationRequestLocationMapImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/dim_1"
+                    app:layout_constraintBottom_toTopOf="@+id/addDonationRequestFragmentAddressHospitalEdit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDonationRequestFragmentEditNumberBag"
+                    app:srcCompat="@drawable/icon_location" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
